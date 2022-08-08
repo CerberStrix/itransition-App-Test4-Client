@@ -19,7 +19,7 @@ function App() {
   );
 
   useEffect(() => {
-    axios.get('http://localhost:3001/authentification/auth', {
+    axios.get('https://itransition-task4-app-usersbs.herokuapp.com/authentification/auth', {
       headers: { accessToken: localStorage.getItem('accessToken') },
     })
       .then((response) => {

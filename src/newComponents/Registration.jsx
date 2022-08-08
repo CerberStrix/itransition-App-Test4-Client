@@ -22,7 +22,7 @@ function Login() {
     <Formik
       validationSchema={schema}
       onSubmit={(data) => {
-        axios.post('http://localhost:3001/authentification/registration', data).then(() => {
+        axios.post('https://itransition-task4-app-usersbs.herokuapp.com/authentification/registration', data).then(() => {
           nav('/newlogin');
         });
       }}

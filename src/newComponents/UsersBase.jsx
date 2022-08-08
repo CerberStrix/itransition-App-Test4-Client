@@ -33,7 +33,7 @@ function UsersBase() {
   const blocking = async () => {
     const usersToBlock = usersList.filter((user) => user.selected === true);
     const ids = usersToBlock.map((user) => user.id);
-    const response = await axios.patch(`http://localhost:3001/users/blocking/${userEmail}`, { ids });
+    const response = await axios.patch(`https://itransition-task4-app-usersbs.herokuapp.com/users/blocking/${userEmail}`, { ids });
     if (response.data.error) {
       logOut();
       return;
@@ -55,7 +55,7 @@ function UsersBase() {
   const unblocking = async () => {
     const usersToBlock = usersList.filter((user) => user.selected === true);
     const ids = usersToBlock.map((user) => user.id);
-    const response = await axios.patch(`http://localhost:3001/users/unblocking/${userEmail}`, { ids });
+    const response = await axios.patch(`https://itransition-task4-app-usersbs.herokuapp.com/users/unblocking/${userEmail}`, { ids });
     if (response.data.error) {
       logOut();
       return;
@@ -74,7 +74,7 @@ function UsersBase() {
   const deleteUsers = async () => {
     const usersToDelete = usersList.filter((user) => user.selected === true);
     const ids = usersToDelete.map((user) => user.id);
-    const response = await axios.patch(`http://localhost:3001/users/destroy/${userEmail}`, { ids });
+    const response = await axios.patch(`https://itransition-task4-app-usersbs.herokuapp.com/users/destroy/${userEmail}`, { ids });
     if (response.data.error) {
       logOut();
       return;
@@ -89,7 +89,7 @@ function UsersBase() {
 
   useEffect(() => {
     const getResponse = async () => {
-      const response = await axios.get(`http://localhost:3001/users/${userEmail}`);
+      const response = await axios.get(`https://itransition-task4-app-usersbs.herokuapp.com/users/${userEmail}`);
       if (response.data.error) {
         logOut();
         return;

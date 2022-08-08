@@ -14,7 +14,7 @@ function Login() {
     nav('/newRegistration');
   };
   const login = (data) => {
-    axios.post('http://localhost:3001/authentification/login', data).then((response) => {
+    axios.post('https://itransition-task4-app-usersbs.herokuapp.com/authentification/login', data).then((response) => {
       if (response.data.error) {
         setErrors(response.data.error);
       } else {
