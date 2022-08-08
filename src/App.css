@@ -1,38 +1,96 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+body {
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.login .formGroup {
+  height: 5rem;
+  margin-top: 1rem;
+  display: flex;
+}
+
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 420px;
+  box-shadow: 20px 40px 60px 20px rgba(12, 5, 62, 0.15);
+  margin: 100px;
+  padding: 30px;
+  padding-top: 60px;
+
+  justify-content: space-between ;
+  align-items: center;
+
+}
+.formLogin h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.formLogin .btn {
+  width: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login .btn {
+  margin-top: 1.5rem;
+  height: 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.registrationForm {
   display: flex;
   flex-direction: column;
+  width: 400px;
+  height: 540px;
+  box-shadow: 20px 40px 60px 20px rgba(12, 5, 62, 0.15);
+  margin: 100px;
+  padding: 30px;
+  padding-top: 90px;
+
+  justify-content: space-between ;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.registrationForm .btn {
+  width: 100px;
+}
+.usersBase {
+  width: 70%;
+  min-width: 700px;
+  box-shadow: 20px 40px 60px 20px rgba(12, 5, 62, 0.15);
+  padding-bottom: 0%;
+  margin-top: 5%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table {
+  margin-bottom: 0%;
 }
+
+.toolbar {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 5px;
+  align-items:baseline
+}
+
+.logoutbtn {
+  margin-left: auto;
+  height: 5%;
+}
+
+.unlocked {
+  color: #17a2b8;
+}
+
+.blocked {
+  color: #dc3545;
+}
+
